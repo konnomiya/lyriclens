@@ -1,0 +1,548 @@
+:root {
+    --lyriclens-primary: #2196f3;
+    --lyriclens-primary-light: #bbdefb;
+    --lyriclens-primary-lighter: #e3f2fd;
+    --lyriclens-success: #4caf50;
+    --lyriclens-warning: #ff9800;
+    --lyriclens-background: #f8f9fa;
+    --lyriclens-border: #e0e0e0;
+    --lyriclens-text: #333;
+    --lyriclens-text-light: #666;
+}
+
+.lyriclens-badge {
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 8px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+    text-transform: uppercase !important;
+    border: 1px solid transparent !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    line-height: 1 !important;
+}
+
+.lyriclens-highlight {
+    background: linear-gradient(120deg, var(--lyriclens-primary-lighter) 0%, var(--lyriclens-primary-light) 100%) !important;
+    padding: 2px 4px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid var(--lyriclens-primary-light) !important;
+    color: #1565c0 !important;
+    font-weight: 600 !important;
+}
+
+.lyriclens-highlight:hover {
+    background: linear-gradient(120deg, var(--lyriclens-primary-light) 0%, var(--lyriclens-primary) 100%) !important;
+    transform: translateY(-1px) !important;
+}
+
+#lyriclens-card {
+    position: fixed !important;
+    z-index: 10000 !important;
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid var(--lyriclens-border) !important;
+    min-width: 250px !important;
+    max-width: 300px !important;
+    animation: cardFadeIn 0.2s ease !important;
+    font-family: system-ui, sans-serif !important;
+}
+
+@keyframes cardFadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.lyriclens-card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    border-bottom: 1px solid var(--lyriclens-border) !important;
+    background: #fafafa !important;
+}
+
+.lyriclens-word {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: var(--lyriclens-text) !important;
+}
+
+.lyriclens-close {
+    background: none !important;
+    border: none !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    width: 24px !important;
+    height: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    color: var(--lyriclens-text-light) !important;
+}
+
+.lyriclens-close:hover {
+    background: #ffebee !important;
+    color: #d32f2f !important;
+}
+
+.lyriclens-content {
+    padding: 16px !important;
+}
+
+.lyriclens-loading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+    color: var(--lyriclens-text-light) !important;
+}
+
+.loading-spinner {
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #f3f3f3 !important;
+    border-top: 2px solid var(--lyriclens-primary) !important;
+    border-radius: 50% !important;
+    animation: spin 1s linear infinite !important;
+    margin-bottom: 8px !important;
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+.lyriclens-badge {
+    font-size: 11px !important;
+    padding: 2px 8px !important;
+    border-radius: 10px !important;
+    display: inline-block !important;
+    margin-top: 8px !important;
+    text-align: center !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.lyriclens-ai-enhanced-badge {
+    background: linear-gradient(135deg, var(--lyriclens-primary), #7b1fa2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3) !important;
+}
+
+.lyriclens-ai-badge {
+    background: linear-gradient(135deg, var(--lyriclens-primary), #1976d2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3) !important;
+}
+
+.lyriclens-cache-badge {
+    background: linear-gradient(135deg, var(--lyriclens-success), #388e3c) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3) !important;
+}
+
+.lyriclens-preset-badge {
+    background: linear-gradient(135deg, var(--lyriclens-warning), #f57c00) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3) !important;
+}
+
+.lyriclens-progress {
+    margin-top: 8px !important;
+    padding: 6px 8px !important;
+    background: var(--lyriclens-background) !important;
+    border-radius: 6px !important;
+    border-left: 3px solid var(--lyriclens-primary) !important;
+}
+
+.lyriclens-progress small {
+    font-size: 10px !important;
+    color: var(--lyriclens-text-light) !important;
+    line-height: 1.3 !important;
+    display: block !important;
+}
+
+.loading-steps {
+    margin-top: 8px !important;
+}
+
+.loading-step {
+    font-size: 12px !important;
+    color: var(--lyriclens-text-light) !important;
+    margin: 2px 0 !important;
+    animation: pulse 2s infinite !important;
+}
+
+.loading-step:nth-child(2) {
+    animation-delay: 0.5s !important;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 0.6; 
+    }
+    50% { 
+        opacity: 1; 
+    }
+}
+
+.lyriclens-mode-badge {
+    background: var(--lyriclens-warning) !important;
+    color: white !important;
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    margin-top: 8px !important;
+}
+
+@media (max-width: 480px) {
+    #lyriclens-card {
+        min-width: 200px !important;
+        max-width: 250px !important;
+    }
+    
+    .lyriclens-content {
+        padding: 12px !important;
+    }
+}
+
+#lyriclens-vocab-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    z-index: 10001 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+.lyriclens-vocab-content {
+    background: white !important;
+    border-radius: 16px !important;
+    width: 90% !important;
+    max-width: 500px !important;
+    max-height: 70vh !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid var(--lyriclens-border) !important;
+    animation: vocabSlideIn 0.3s ease !important;
+}
+
+@keyframes vocabSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.lyriclens-vocab-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 24px !important;
+    border-bottom: 1px solid var(--lyriclens-border) !important;
+    background: linear-gradient(135deg, var(--lyriclens-primary), #1976d2) !important;
+    color: white !important;
+}
+
+.lyriclens-vocab-header h3 {
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+
+.lyriclens-close-vocab {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    padding: 6px !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    color: white !important;
+    transition: all 0.2s ease !important;
+}
+
+.lyriclens-close-vocab:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(1.1) !important;
+}
+
+.lyriclens-vocab-list {
+    padding: 20px 24px !important;
+    max-height: 45vh !important;
+    overflow-y: auto !important;
+    background: #fafafa !important;
+}
+
+.lyriclens-vocab-list::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.lyriclens-vocab-list::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 3px !important;
+}
+
+.lyriclens-vocab-list::-webkit-scrollbar-thumb {
+    background: var(--lyriclens-primary) !important;
+    border-radius: 3px !important;
+}
+
+.lyriclens-vocab-list::-webkit-scrollbar-thumb:hover {
+    background: #1976d2 !important;
+}
+
+.lyriclens-vocab-item {
+    background: white !important;
+    border: 1px solid var(--lyriclens-border) !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.2s ease !important;
+    position: relative !important;
+}
+
+.lyriclens-vocab-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+
+.vocab-word {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--lyriclens-primary) !important;
+    margin-bottom: 6px !important;
+}
+
+.vocab-meaning {
+    font-size: 14px !important;
+    color: var(--lyriclens-text) !important;
+    margin-bottom: 4px !important;
+    line-height: 1.4 !important;
+}
+
+.vocab-context {
+    font-size: 12px !important;
+    color: var(--lyriclens-text-light) !important;
+    font-style: italic !important;
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+}
+
+.vocab-date {
+    font-size: 11px !important;
+    color: #999 !important;
+    margin-bottom: 12px !important;
+}
+
+.lyriclens-meaning {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--lyriclens-primary) !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+}
+
+.lyriclens-details {
+    font-size: 13px !important;
+    color: var(--lyriclens-text) !important;
+    line-height: 1.4 !important;
+}
+
+.lyriclens-grammar {
+    margin-bottom: 6px !important;
+    padding: 5px 8px !important;
+    background: var(--lyriclens-background) !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    border-left: 2px solid var(--lyriclens-primary) !important;
+}
+
+.lyriclens-context {
+    padding: 5px 8px !important;
+    background: #f3f8ff !important;
+    border-radius: 4px !important;
+    border-left: 2px solid var(--lyriclens-primary) !important;
+    font-size: 12px !important;
+    color: var(--lyriclens-text-light) !important;
+}
+
+
+.vocab-remove-btn {
+    background: linear-gradient(135deg, #ff4757, #ff3742) !important;
+    color: white !important;
+    border: none !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.vocab-remove-btn:hover {
+    background: linear-gradient(135deg, #ff3742, #ff2e3b) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(255, 71, 87, 0.3) !important;
+}
+
+.vocab-empty {
+    text-align: center !important;
+    color: var(--lyriclens-text-light) !important;
+    font-style: italic !important;
+    padding: 40px 20px !important;
+    font-size: 14px !important;
+}
+
+.lyriclens-vocab-actions {
+    padding: 16px 24px !important;
+    border-top: 1px solid var(--lyriclens-border) !important;
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: flex-end !important;
+    background: white !important;
+}
+
+.vocab-export-btn, .vocab-close-btn {
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    min-width: 100px !important;
+}
+
+.vocab-export-btn {
+    background: linear-gradient(135deg, var(--lyriclens-success), #388e3c) !important;
+    color: white !important;
+}
+
+.vocab-export-btn:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3) !important;
+}
+
+.vocab-close-btn {
+    background: linear-gradient(135deg, #78909c, #607d8b) !important;
+    color: white !important;
+}
+
+.vocab-close-btn:hover {
+    background: linear-gradient(135deg, #607d8b, #546e7a) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(96, 125, 139, 0.3) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .lyriclens-vocab-content {
+        width: 95% !important;
+        max-height: 80vh !important;
+    }
+    
+    .lyriclens-vocab-header {
+        padding: 16px 20px !important;
+    }
+    
+    .lyriclens-vocab-list {
+        padding: 16px 20px !important;
+        max-height: 55vh !important;
+    }
+    
+    .lyriclens-vocab-actions {
+        padding: 12px 20px !important;
+        flex-direction: column !important;
+    }
+    
+    .vocab-export-btn, .vocab-close-btn {
+        min-width: auto !important;
+        width: 100% !important;
+    }
+}
+
+.lyriclens-actions {
+    margin-top: 12px !important;
+    padding-top: 12px !important;
+    border-top: 1px solid var(--lyriclens-border) !important;
+    display: flex !important;
+    gap: 6px !important;
+}
+
+.save-word-btn, .view-vocab-btn {
+    flex: 1 !important;
+    background: var(--lyriclens-primary) !important;
+    color: white !important;
+    border: none !important;
+    padding: 6px 8px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.view-vocab-btn {
+    background: var(--lyriclens-success) !important;
+}
+
+.save-word-btn:hover {
+    background: #1976d2 !important;
+    transform: translateY(-1px) !important;
+}
+
+.view-vocab-btn:hover {
+    background: #388e3c !important;
+    transform: translateY(-1px) !important;
+}
+
+.save-word-btn:disabled {
+    background: #bdbdbd !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}

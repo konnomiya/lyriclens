@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LyricLens",
+  "version": "1.0",
+  "description": "AI-powered lens for deeper lyrical understanding - See beyond the lyrics",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*",
+        "https://youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*"
+  ]
+}
